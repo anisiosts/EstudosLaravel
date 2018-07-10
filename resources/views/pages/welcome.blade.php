@@ -13,24 +13,16 @@
         <div class="row">
             <div class="col-md-8">
                 <div class="post">
-                    <h1>Post Title</h1>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi voluptatem a magnam dolorum voluptates eveniet sint eos, ad voluptatum natus vel ea autem illum esse laboriosam atque vero iure quam!...</p>
-                    <a href="" class="btn btn-primary">Read More</a>
+                    @foreach($posts as $post)
+                <h1>{{$post -> title}}</h1>
+                    <p>{{$post -> body}}</p>
+                <a href="" class="btn btn-primary">Read More</a>
                 </div>
                 <hr>
-                <div class="post">
-                    <h1>Post Title</h1>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi voluptatem a magnam dolorum voluptates eveniet sint eos, ad voluptatum natus vel ea autem illum esse laboriosam atque vero iure quam!...</p>
-                    <a href="" class="btn btn-primary">Read More</a>
-                </div>
-                <hr><div class="post">
-                    <h1>Post Title</h1>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi voluptatem a magnam dolorum voluptates eveniet sint eos, ad voluptatum natus vel ea autem illum esse laboriosam atque vero iure quam!...</p>
-                    <a href="" class="btn btn-primary">Read More</a>
-                </div>
-            </div>
+                @endforeach
             <div class="col-md-3 col-md-offset-1">
                <h2>Sidebar</h2>
             </div>
         </div>
+    </div>
 @endsection
